@@ -1,0 +1,23 @@
+{
+  "name": "usa-geojson",
+  "version": "1.0.0",
+  "description": "simple express server to serve static json files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulFenton/usa-geojson.git"
+  },
+  "author": "Paul G Fenton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulFenton/usa-geojson/issues"
+  },
+  "homepage": "https://github.com/PaulFenton/usa-geojson#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
