@@ -3,6 +3,14 @@ var fs = require('fs');
 const app = express()
 const port = 3000
 
+//configure CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+  
+
 //test route
 app.get('/', (req, res) => res.send('Hello World!'));
 
@@ -19,10 +27,10 @@ app.get('/counties/:stateId', (req, res) => {
     var counties = JSON.parse(fs.readFileSync('./data/counties.json', 'utf8'));
 
     //filter the counties data file by state Id
-    var filtered = counties.features.filter(el => el.properties.STATEFP == req.params.stateId);
+    counties.features = counties.features.filter(el => el.properties.STATEFP == req.params.stateId);
 
     //send the filtered result
-    res.send(filtered);
+    res.send(counties);
 });
 
 //start the server
