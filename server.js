@@ -3,7 +3,7 @@ var fs = require('fs');
 const app = express()
 const port = 3000
 
-//configure CORS
+//configure CORS for local development
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -20,7 +20,7 @@ app.get('/states', (req, res) => {
     res.send(states);
 });
 
-//get the county GeoJson for a state
+//get the county GeoJson for a county based on state ID
 app.get('/counties/:stateId', (req, res) => {
 
     //read the counties data file
