@@ -1,7 +1,7 @@
 const express = require('express');
 var fs = require('fs');
 const app = express()
-const port = 80
+const port = 3000
 
 //configure CORS for local development
 app.use(function(req, res, next) {
