@@ -60,9 +60,10 @@ typings/
 # next.js build output
 .next
 
-# aws elastic beanstalk stuff
-.elasticbeanstalk/
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+# VSCode
+.vscode/
+
+# Docker stuff
+.dockerignore
+Dockerfile
+docker-compose*
